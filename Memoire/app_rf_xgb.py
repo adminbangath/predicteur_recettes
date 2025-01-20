@@ -19,18 +19,18 @@ class TimeSeriesPredictor:
         try:
             # Chargement du dataset ARIMA
             self.df = pd.read_csv(
-                './../Dataset/df_colab_travail_final_engineered.csv',
+                'predicteur_recettes/Dataset/df_colab_travail_final_engineered.csv',
                 parse_dates=['DATE']
             )
             # Chargement des modèles RF et XGBoost
-            self.rf_model = joblib.load('./modeles/best_rf.pkl')
+            self.rf_model = joblib.load('modeles/best_rf.pkl')
             
             # Chargement du modèle XGBoost
             self.xgb_model = XGBRegressor()
-            self.xgb_model.load_model('./modeles/best_xgb.json')
+            self.xgb_model.load_model('modeles/best_xgb.json')
             
             # Chargement du dataset pour RF et XGBoost
-            self.rf_xgb_data = pd.read_csv('./../Dataset/df_travail_final_random_search.csv_engineered.csv')
+            self.rf_xgb_data = pd.read_csv('predicteur_recettes/Dataset/df_travail_final_random_search.csv_engineered.csv')
             self.rf_xgb_data.drop('Unnamed: 0', axis=1, inplace=True)
             
         except FileNotFoundError as e:
