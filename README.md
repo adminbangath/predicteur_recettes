@@ -50,7 +50,7 @@ L'application utilise des données macroéconomiques provenant du Sénégal. Les
    ```
 ## 🔒 Licence
 Cette application est la propriété exclusive de Bangath Systems. Tous droits réservés.
-Veuillez consulter le fichier LICENSE pour plus d'informations.
+Veuillez consulter le fichier [LICENSE](license.md) pour plus d'informations.
 
 ## 📧 Contact
 Pour toute question ou suggestion, contactez-nous à : admin@bangath.com
